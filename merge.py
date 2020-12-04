@@ -7,10 +7,9 @@ import xml.etree.ElementTree as ET
 
 __author__ = 'Stefan Weiberg'
 __license__ = 'EUPLv2'
-__version__ = '0.0.1'
+__version__ = '1.0.0'
 __maintainer__ = 'Stefan Weiberg'
 __email__ = 'sweiberg@suse.com'
-__status__ = 'Development'
 
 desc = "tool to merge tcx files from coxswain with HR information from a gpx export from HealthFit"
 parser = argparse.ArgumentParser()
