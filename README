@@ -1,0 +1,14 @@
+# Coxswain Apple Watch/Health merger
+This python script helps with combining WaterRower training data from the Android app (https://github.com/svenmeier/coxswain)[Coxswain] with measurements of an Apple Watch saved in Apple Health. This merged file can then be used for import to Strava.
+
+## Requirements
+* tcx file exported from a workout in Coxswain
+* gpx file of a workout exported from Apple Health via the iOS app (https://apps.apple.com/us/app/healthfit/id1202650514)[HealthFit]
+
+## How to record training session
+Connect an Android device with Coxswain to the S4 Monitor of the WaterRower. Either with the Bluetooth com module or via an OTG cable. Setup workout on your Android device. Start an indoor rowing workout on your Apple Watch and start the training.
+
+After finishing the training export the Coxswain training session to tcx and the Apple Health training data to gpx via HealthFit (set .gpx extension as default instead of .fit). Provide both files to the script.
+
+## Result
+The result will be a rough matchup of the heartrate data from the Apple Watch to the training data from the WaterRower. At the current stage only the heartrate reading from Apple Health is used. Calories and other data is used from the S4 Monitor.
