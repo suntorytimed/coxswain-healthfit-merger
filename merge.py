@@ -58,23 +58,12 @@ if __name__ == "__main__":
                 if input_timestamp <= target_timestamp:
                     try:
                         if list(hr_data)[i+1] > target_timestamp:
-                            print('OK')
-                            # set value
                             hr_target[target_timestamp].text = hr_data[input_timestamp]
-                            print(hr_target[target_timestamp])
-                            print(hr_data[input_timestamp])
                         else:
-                            print("no match: inner if -> ", input_timestamp, target_timestamp)
-                            print("next element")
                             break
                     except IndexError:
-                        print("last element:")
-                        print(input_timestamp)
-                        # set value
                         hr_target[target_timestamp].text = hr_data[input_timestamp]
                         break
-                else:
-                    print("no match: outer if -> ", input_timestamp, target_timestamp)
         
         ET.register_namespace('',"http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2")
         ET.register_namespace('TPX',"http://www.garmin.com/xmlschemas/ActivityExtension/v2")
